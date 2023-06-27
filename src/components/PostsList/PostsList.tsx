@@ -32,6 +32,8 @@ export const PostsList: React.FC<PostsListProps> = ({
 		</Row>
 	) : null;
 
+	// Ideally, it is necessary to refactor and extract all the logic and the List.Item into a separate component.
+	// But Ant Design doesn't allow doing it without consequences and workarounds.
 	const savedPostsId = useStore($savedPostsId);
 	const saveButton = React.useCallback(
 		(postId: number) =>
